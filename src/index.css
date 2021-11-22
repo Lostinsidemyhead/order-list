@@ -8,6 +8,8 @@
   margin: 50px 20px;
   display: flex;
   flex-direction: column;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .order{
@@ -43,6 +45,9 @@
   width: 400px;
   overflow: hidden;
   padding: 10px;
+}
+.order-head{
+  font-weight: 600;
 }
 
 @media screen and (max-width: 580px) {

@@ -44,6 +44,7 @@ const Order: React.FC<IOrderProps> = ({ ...props }) => {
         <img src={props.order.PreviewImageUrl} alt="No image" />
       </div>
       <div className="order-info">
+        <div className="order-head">Заказ</div>
         <div>
           {props.order.Title}
         </div>
@@ -73,6 +74,7 @@ const Order: React.FC<IOrderProps> = ({ ...props }) => {
         </div>
       </div>
       <div className="shipping-info">
+        <div className="order-head">Продавец</div>
         <div>
           Email: {props.order.Shipping.Email || "Не указан"}
         </div>
