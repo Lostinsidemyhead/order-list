@@ -54,9 +54,10 @@ const Order: React.FC<IOrderProps> = ({ ...props }) => {
         <div>
           Адрес: {parseAddress(props.order.DeliveryAddress)}
         </div>
-        <div>
-          Телефон: {props.order.DeliveryAddress.Phone || "Не указан"}
-        </div>
+        {props.order.DeliveryAddress.Phone &&
+          <div>
+            Телефон: {props.order.DeliveryAddress.Phone}
+          </div>}
         <div>
           Создан: {parseDate(props.order.DateCreated)}
         </div>
@@ -75,12 +76,15 @@ const Order: React.FC<IOrderProps> = ({ ...props }) => {
       </div>
       <div className="shipping-info">
         <div className="order-head">Продавец</div>
-        <div>
-          Email: {props.order.Shipping.Email || "Не указан"}
-        </div>
-        <div>
-          Телефон: {props.order.Shipping.Phone || "Не указан"}
-        </div>
+        {props.order.Shipping.Email &&
+          <div>
+            Email: {props.order.Shipping.Email}
+          </div>}
+        {props.order.Shipping.Phone &&
+          <div>
+            Телефон: {props.order.Shipping.Phone}
+          </div>
+        }
         <div>
           {props.order.Shipping.Title}
         </div>
