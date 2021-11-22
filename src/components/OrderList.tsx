@@ -11,12 +11,12 @@ const OrderList: React.FC = () => {
   }, [])
 
   const getOrders = async () => {
-    const fetched = await fetchOrders()
+    const fetched = await fetchOrders();
     setOrders(fetched);
   }
 
   return (
-    <div>
+    <div className="order-list">
       {orders.map((order, index) => (
         <Order
           key={index}

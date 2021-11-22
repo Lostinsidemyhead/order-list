@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { orderType, responceType } from '../types';
 
 const authRequestTokenURL = "http://api.pixlpark.com/oauth/requesttoken";
 const publicKey = process.env.REACT_APP_PUBLIC_KEY;
@@ -27,6 +28,6 @@ const auth = async () => {
 export const fetchOrders = async () => {
   const authToken = await auth();
   const ordersURL = `http://api.pixlpark.com/orders?oauth_token=${authToken}`;
-  const responce = await axios.get(ordersURL);
+  const responce = await axios.get<responceType>(ordersURL);
   return responce?.data?.Result;
 }

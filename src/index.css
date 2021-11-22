@@ -2,3 +2,61 @@
   margin: 0;
   padding: 0;
 }
+
+
+.order-list {
+  margin: 50px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.order{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: row;
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 4px 4px 18px 0px rgba(34, 60, 80, 0.2);
+  margin: 10px;
+}
+
+.order-image{
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.order img{
+  width: 100%;
+  object-fit: contain;
+}
+
+.order-info{
+  padding: 10px;
+  width: 600px;
+  overflow: hidden;
+}
+
+.shipping-info{
+  width: 400px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+@media screen and (max-width: 580px) {
+  .order{
+    flex-direction: column;
+  } 
+  .order-info{
+    width: 95%;
+    padding: 10px;
+
+  }
+  .shipping-info{
+    width: 95%;
+    padding: 10px;
+
+  }
+}
